@@ -89,8 +89,6 @@ class ViewController: UIViewController {
         do{
             let people = try managedContext.fetch(fetchRequest)
             
-            //var count = test.count
-            //print(count)
             for person in people{
                 let objectToDelete = person as! NSManagedObject
                 managedContext.delete(objectToDelete)
@@ -104,7 +102,7 @@ class ViewController: UIViewController {
             catch{
                 print(error)
             }
-        } catch{
+        } catch {
             print(error)
             
         }
